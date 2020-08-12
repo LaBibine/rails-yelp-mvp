@@ -4,3 +4,10 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+desc "test"
+task :spec do 
+    sh "bundle exec rspec"
+end
+
+task default: [:spec]
